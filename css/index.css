@@ -135,10 +135,16 @@ body {
   height: 100%;
 }
 /* My code starts here */
-h2 {
+.blue-header {
   color: cornflowerblue;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+}
+.top-border {
+  width: 100%;
+  border-top: 1px solid grey;
+  margin-top: 30px;
+  padding-top: 30px;
 }
 .container {
   width: 90%;
@@ -147,6 +153,11 @@ h2 {
   display: flex;
   flex-flow: row-reverse wrap;
   justify-content: space-between;
+}
+@media (max-width: 500px) {
+  .container {
+    flex-flow: column nowrap;
+  }
 }
 .top-centered {
   width: 100%;
@@ -178,10 +189,120 @@ h2 {
   text-decoration: underline;
 }
 .left-column {
-  width: 30%;
+  width: 25%;
+}
+.left-column p {
+  color: grey;
+  line-height: 1.2em;
+  font-size: 1em;
+}
+.left-column ul {
+  margin: 0 0 0 7px;
+}
+.left-column li {
+  color: grey;
+  list-style: circle;
+  margin: 10px;
+  line-height: 1.2em;
+}
+.left-column h3 {
+  font-weight: 900;
+  color: grey;
+  margin-top: 25px;
+  font-size: 1.05em;
+}
+.left-column h4 {
+  letter-spacing: 0.05em;
+  color: grey;
+  margin-bottom: 10px;
+  font-size: 1.05em;
+}
+.left-column .contact h2 {
+  color: cornflowerblue;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.left-column .education h2 {
+  color: cornflowerblue;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  width: 100%;
+  border-top: 1px solid grey;
+  margin-top: 30px;
+  padding-top: 30px;
+}
+.left-column .expertise h2 {
+  color: cornflowerblue;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  width: 100%;
+  border-top: 1px solid grey;
+  margin-top: 30px;
+  padding-top: 30px;
+}
+@media (max-width: 500px) {
+  .left-column {
+    width: 100%;
+    display: flex;
+    flex-flow: column-reverse nowrap;
+  }
+  .left-column .contact h2 {
+    color: cornflowerblue;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    width: 100%;
+    border-top: 1px solid grey;
+    margin-top: 30px;
+    padding-top: 30px;
+  }
 }
 .right-column {
-  width: 60%;
+  width: 70%;
+}
+.right-column p {
+  color: grey;
+  line-height: 1.2em;
+  font-size: 1em;
+}
+.right-column ul {
+  margin: 0 0 0 7px;
+}
+.right-column li {
+  color: grey;
+  list-style: circle;
+  margin: 10px;
+  line-height: 1.2em;
+}
+.right-column h3 {
+  font-weight: 900;
+  color: grey;
+  margin-top: 25px;
+  font-size: 1.05em;
+}
+.right-column h4 {
+  letter-spacing: 0.05em;
+  color: grey;
+  margin-bottom: 10px;
+  font-size: 1.05em;
+}
+.right-column .summary h2 {
+  color: cornflowerblue;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.right-column .experience h2 {
+  color: cornflowerblue;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  width: 100%;
+  border-top: 1px solid grey;
+  margin-top: 30px;
+  padding-top: 30px;
+}
+@media (max-width: 500px) {
+  .right-column {
+    width: 100%;
+  }
 }
 footer {
   width: 100%;
@@ -191,6 +312,6 @@ footer {
 }
 footer p {
   color: grey;
-  margin: 30px;
+  margin: 70px;
   font-size: 0.9em;
 }

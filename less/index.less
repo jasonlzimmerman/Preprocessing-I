@@ -61,14 +61,21 @@ html, body {
 
 @text-color-standard: grey;
 @text-small: .9em;
-@text-medium: 1.2em;
-@text-large: 1.8em;
+@text-medium: 1em;
+@text-large: 1.05em;
 @text-x-large: 2.6em;
 
-h2 {
+.blue-header {
 	color: cornflowerblue;
 	text-transform: uppercase;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
+}
+
+.top-border {
+	width: 100%;
+	border-top: 1px solid @text-color-standard;
+	margin-top: 30px;
+	padding-top: 30px;
 }
 .container {
 	width: 90%;
@@ -77,6 +84,9 @@ h2 {
 	display: flex;
 	flex-flow: row-reverse wrap;
 	justify-content: space-between;
+	@media (max-width: 500px) {
+		flex-flow: column nowrap;
+	  }
 }
 
 .top-centered {
@@ -110,11 +120,105 @@ h2 {
 }
 
 .left-column {
-	width: 30%;
+	width: 25%;
+	p {
+		color: @text-color-standard;
+		line-height: 1.2em;
+		font-size: @text-medium;
+	}
+	ul {
+		margin: 0 0 0 7px;
+	}
+	li {
+		color: @text-color-standard;
+		list-style: circle;
+		margin: 10px;
+		line-height: 1.2em;
+	}
+	h3 {
+		font-weight: 900;
+		color: @text-color-standard;
+		margin-top: 25px;
+		font-size: @text-large;
+	}
+	h4 {
+		letter-spacing: .05em;
+		color: @text-color-standard;
+		margin-bottom: 10px;
+		font-size: @text-large;
+	}
+	.contact {
+		h2 {
+		.blue-header;
+		}
+	}
+	.education {
+		h2 {
+		.blue-header;
+		.top-border;
+		}
+	}
+	.expertise {
+		h2 {
+		.blue-header;
+		.top-border;
+		}
+	}
+	@media (max-width: 500px) {
+		width: 100%;
+		display: flex;
+		flex-flow: column-reverse nowrap;
+		.contact {
+			h2 {
+			.blue-header;
+			.top-border;
+			}
+		}
+	}
 }
 
 .right-column {
-	width: 60%;
+	width: 70%;
+	p {
+		color: @text-color-standard;
+		line-height: 1.2em;
+		font-size: @text-medium;
+	}
+	ul {
+		margin: 0 0 0 7px;
+	}
+	li {
+		color: @text-color-standard;
+		list-style: circle;
+		margin: 10px;
+		line-height: 1.2em;
+	}
+	h3 {
+		font-weight: 900;
+		color: @text-color-standard;
+		margin-top: 25px;
+		font-size: @text-large;
+	}
+	h4 {
+		letter-spacing: .05em;
+		color: @text-color-standard;
+		margin-bottom: 10px;
+		font-size: @text-large;
+	}
+	.summary {
+		h2 {
+		.blue-header;
+		}
+	}
+	.experience {
+		h2 {
+		.blue-header;
+		.top-border;
+		}
+	}
+	@media (max-width: 500px) {
+		width: 100%;
+	}
 }
 
 footer {
@@ -124,7 +228,7 @@ footer {
 	text-align: center;
 	p {
 		color: @text-color-standard;
-		margin: 30px;
+		margin: 70px;
 		font-size: @text-small;
 	}
 }
